@@ -1,0 +1,58 @@
+.form {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 5px rgba(83, 81, 81, 0.5);
+  background-color: #fff;
+  padding: 1rem 3rem;
+}
+
+.form__heading {
+  text-align: center;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 2.5rem;
+  color: inherit;
+}
+
+.form__group {
+  width: 100%;
+  align-items: center;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.form__input {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+}
+
+.form__input:focus {
+  outline: #fca510;
+  border: 2px solid #fca510;
+}
+
+::-moz-placeholder {
+  font-size: 1.5rem;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+.submit__btn {
+  float: right;
+  padding: 1rem 2rem;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: #ffde2b;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.submit__btn:hover {
+  color: #ffde2b;
+  background-color: #333;
+}
