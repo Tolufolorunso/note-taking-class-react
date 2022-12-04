@@ -1,11 +1,38 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav {
+  background-color: #ffde2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  padding: 0 6rem;
+  width: 100%;
 }
 
-.header ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 4rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.nav__link:hover {
+  opacity: 0.5;
+}
+
+.highlight {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.logo {
+  opacity: 0.8;
 }
