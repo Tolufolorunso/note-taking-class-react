@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/header/Header";
-import Form from "./components/form/Form";
-
+import HomePage from "./components/homePage/HomePage";
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Form />
+      {/* <Header /> */}
+      <HomePage />
+      {/* <Form /> */}
     </div>
   );
 };

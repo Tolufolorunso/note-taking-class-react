@@ -1,3 +1,13 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
 .form {
   width: 50%;
   position: absolute;
@@ -7,6 +17,7 @@
   box-shadow: 0 0 10px 5px rgba(83, 81, 81, 0.5);
   background-color: #fff;
   padding: 1rem 3rem;
+  z-index: 1000;
 }
 
 .form__heading {
@@ -39,6 +50,12 @@
   letter-spacing: 0.2rem;
 }
 
+.form__input::-webkit-input-placeholder {
+  font-size: 1.5rem;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  letter-spacing: 0.2rem;
+}
+
 .submit__btn {
   float: right;
   padding: 1rem 2rem;
@@ -50,6 +67,13 @@
   border: none;
   cursor: pointer;
   color: #333;
+}
+
+.close__btn {
+  float: right;
+  margin-top: -4rem;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 .submit__btn:hover {

@@ -1,0 +1,29 @@
+.title__container {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title__heading {
+  font-family: "Lobster", cursive;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.title__btn {
+  padding: 1rem 2rem;
+  font-family: inherit;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.title__btn:hover {
+  color: #ffde2b;
+  background-color: #333;
+}
