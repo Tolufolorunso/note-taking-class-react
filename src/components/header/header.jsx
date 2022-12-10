@@ -1,26 +1,31 @@
 import React from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
     <div>
       <header className="nav">
-        <h3 className="logo">{<span className="highlight">Note</span>} App</h3>
+        <Link to="/">
+          <h3 className="logo">
+            {<span className="highlight">Note</span>} App
+          </h3>
+        </Link>
         <ul className="nav__links">
           <li className="nav__item">
-            <a className="nav__link" href="#">
+            <Link to="/notes" className="nav__link">
               Notes
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#">
+            <Link to="/about" className="nav__link">
               About
-            </a>
+            </Link>
           </li>
           <li className="nav__item">
-            <a className="nav__link" href="#">
+            <Link to="/contact" className="nav__link">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </header>
@@ -29,5 +34,3 @@ const Header = (props) => {
 };
 
 export default Header;
-
-

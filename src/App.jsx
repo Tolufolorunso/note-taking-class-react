@@ -1,36 +1,30 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/header/Header";
-import HomePage from "./components/homePage/HomePage";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import NotFound from "./pages/404";
+// import NotePage from "./pages/NotePage";
+// import AboutPage from "./pages/AboutPage";
+// import ContactPage from "./pages/ContactPage";
+
+import {HomePage,NotePage,AboutPage,ContactPage,NotFound} from "./pages"
 
 const App = () => {
   return (
-    <div>
-      {/* <Header /> */}
-      <HomePage />
-      {/* <Form /> */}
-    </div>
+    <>
+    <BrowserRouter>
+    <Header />    
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/notes" element={<NotePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 };
 
 export default App;
-
-// const name = "abigail";
-// const projectName = "Note Taking App";
-
-// function clickHandler(e) {
-//   e.preventDefault();
-//   console.log("you clicked me");
-// }
-// return (
-//   <div>
-//     <Header name="Note Taking" onClick={clickHandler} />
-//     <h1 onClick={clickHandler} className="heading">
-//       {projectName.toUpperCase()}
-//     </h1>
-//     <form action="">
-//       <button onClick={clickHandler}>Click Event</button>
-//     </form>
-//     <footer></footer>
-//   </div>
-// );
