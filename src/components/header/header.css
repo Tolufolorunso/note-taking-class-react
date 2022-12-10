@@ -1,11 +1,11 @@
 .nav {
-  background-color: #ffde2b;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 9rem;
   padding: 0 6rem;
   width: 100%;
+  background: linear-gradient(to right, #19a186, #f2cf43);
 }
 
 .nav__links {
