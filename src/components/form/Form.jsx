@@ -2,47 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 
 import "./Form.css";
 
-const Form = ({ open, onClose }) => {
+const Form = ({ open, onClose,handleSubmit,values,handleChange }) => {
   if (!open) return null;
-
-  // const genderRef = useRef()
-
-  console.log("hello");
-  // const [title, setTitle] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [description, setDescription] = useState("");
-  const [values, setValues] = useState({
-    title: "",
-    description: "",
-  });
-
-  // const handleTitleInput = (e) => {
-  //   setTitle(e.target.value);
-  // };
-
-  // const handleDescription = (e) => {
-  //   setDescription(e.target.value);
-  // };
-
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // console.log(genderRef.current)
-
-    // const data = {
-    //   title: title,
-    //   description: description,
-    // };
-    console.log(values);
-
-    setValues({
-      title: "",
-      description: "",
-    });
-  };
 
   return (
     <>
@@ -62,14 +23,6 @@ const Form = ({ open, onClose }) => {
             value={values.title}
             onChange={handleChange}
           />
-          {/* <input
-            className="form__input"
-            type="text"
-            name="gender"
-            placeholder="gneder"
-            id="text"
-            ref={genderRef}
-          /> */}
           <textarea
             className="form__input"
             name="description"
