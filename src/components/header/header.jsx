@@ -1,16 +1,17 @@
 import React from "react";
-import "./header.css";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div>
       <header className="nav">
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: "none" }}>
           <h3 className="logo">
             {<span className="highlight">Note</span>} App
           </h3>
         </Link>
+
         <ul className="nav__links">
           <li className="nav__item">
             <Link to="/notes" className="nav__link">
@@ -18,13 +19,13 @@ const Header = (props) => {
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="/about" className="nav__link">
-              About
+            <Link to="/login" className="nav__link">
+              Login
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="/contact" className="nav__link">
-              Contact
+            <Link to="/register" className="nav__link">
+              Sign up
             </Link>
           </li>
         </ul>
