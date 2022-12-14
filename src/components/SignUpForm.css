@@ -1,0 +1,71 @@
+.registration__form {
+  width: 40%;
+  background-color: #d3d3d3;
+  border: 2px solid #f1e767;
+  margin: 4rem 0;
+}
+
+.register__form-heading {
+  color: #333;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.register__form-wrapper {
+  margin: 0 0 3em 0;
+  position: relative;
+}
+
+.register__form-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  margin: 0;
+  background-color: #d3d3d3;
+}
+.register__form-input {
+  width: 100%;
+  margin: 2rem auto;
+  border: thin solid #8fc400;
+  padding: 1rem;
+  align-items: center;
+}
+
+label {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.8rem;
+  color: #333;
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  /* transition: color 0.3s, top 0.3s, background-color 0.8s; */
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.float-label {
+  font-size: 1rem;
+  top: -14px;
+  background-color: rgba(211, 211, 211);
+}
+
+.signUp__btn {
+  border: 1.5px solid #f1e767;
+  background-color: #8fc400;
+  color: #333;
+  float: right;
+  cursor: pointer;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 3rem;
+}
+
+.signUp__btn:hover {
+  background-color: #f1e767;
+  border: 1.5px solid #8fc400;
+  color: #333;
+}

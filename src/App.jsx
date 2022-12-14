@@ -8,21 +8,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import AboutPage from "./pages/AboutPage";
 // import ContactPage from "./pages/ContactPage";
 
-import {HomePage,NotePage,AboutPage,ContactPage,NotFound} from "./pages"
+import { HomePage, NotePage, AboutPage, ContactPage, NotFound } from "./pages";
 
 const App = () => {
   return (
     <>
-    <BrowserRouter>
-    <Header />    
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/notes" element={<NotePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/notes" element={<NotePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
