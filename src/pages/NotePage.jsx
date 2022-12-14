@@ -24,7 +24,6 @@ function NotePage() {
   return (
     <div>
       {isLoading ? <Loading /> :  notes.map((note) => {
-        console.log(note);
         return (
           <div key={note._id}>
             <h1>{note.title}</h1>

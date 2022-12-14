@@ -1,7 +1,7 @@
 import React from "react";
 import "./LoginForm.css";
 
-const LoginForm = ({ handleSubmit, handleChange, values }) => {
+const LoginForm = ({ handleSubmit, handleChange, values,isLoading }) => {
   return (
     <>
       <form className=" form login__form" onSubmit={handleSubmit}>
@@ -29,7 +29,7 @@ const LoginForm = ({ handleSubmit, handleChange, values }) => {
         </div>
 
         <div>
-          <input type="submit" required value="Login" className="login__btn" />
+          <input type="submit" required value={isLoading ? "Login..." : "Login"} className="login__btn" />
         </div>
       </form>
     </>
