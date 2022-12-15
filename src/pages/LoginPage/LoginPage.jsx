@@ -4,6 +4,8 @@ import LoginForm from "../../components/form/LoginForm";
 // import { yupResolver } from "@hookform/resolvers";
 // import * as yup from "yup";
 import { useNavigate  } from "react-router-dom";
+import { useAppContext } from "../../store/appContext";
+import Toast from "../../components/Toast";
 
 
 const LoginPage = () => {
@@ -11,6 +13,8 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
+
+  console.log(useAppContext())
 
   const [isLoading,setIsLoading] = useState()
   const navigate = useNavigate()
@@ -57,6 +61,8 @@ setIsLoading(false)
 
   return (
     <>
+      <Toast />
+      
       <LoginForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}

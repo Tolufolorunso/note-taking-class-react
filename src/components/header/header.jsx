@@ -1,12 +1,17 @@
 import React,{useEffect,useState} from "react";
 import { Link,useNavigate } from "react-router-dom";
+import { useAppContext } from "../../store/appContext";
 import "./Header.css";
 
 
 const Header = () => {
   const [user, setUser] = useState(null)
   const [token, setToken] = useState('')
-const navigate = useNavigate()
+  const navigate = useNavigate()
+ 
+  const app = useAppContext()
+
+  console.log(app)
 
   function handleLogout() {
     localStorage.clear()

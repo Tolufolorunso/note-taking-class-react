@@ -4,11 +4,12 @@ import "./HomePage.css";
 import Form from "../../components/form/Form";
 import Loading from "../../components/Loading";
 
+import { useAppContext } from "../../store/appContext";
+
 const HomePage = () => {
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [todo, setTodo] = useState(null);
-
+console.log(useAppContext())
   const handleShowForm = () => {
     setShowForm(true);
   };
@@ -16,16 +17,6 @@ const HomePage = () => {
   const handleCloseForm = () => {
     setShowForm(false);
   };
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
-      .then((response) => response.json())
-      .then((json) => {
-        setTodo(json);
-        setIsLoading(false);
-      });
-    console.log("useEffect");
-  }, []);
 
   const [values, setValues] = useState({
     title: "",
@@ -74,7 +65,6 @@ const HomePage = () => {
           </button>
         </div>
       </div>
-      <div>{isLoading ? <Loading /> : <h1>{todo.title}</h1>}</div>
       <Form
         open={showForm}
         onClose={handleCloseForm}
