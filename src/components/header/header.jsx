@@ -5,7 +5,6 @@ import "./Header.css";
 
 
 const Header = () => {
-  const [user, setUser] = useState(null)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const navigate = useNavigate()
  
@@ -13,14 +12,13 @@ const Header = () => {
 
   function handleLogout() {
     logout()
-    // navigate('/login')
-    window.location.href = "/login"
+    navigate('/login')
+    // window.location.href = "/login"
   }
   useEffect(() => {  
     if (token) {
       setIsLoggedIn(true)
     }
-    console.log(token)
   }, [token])
   
   return (
