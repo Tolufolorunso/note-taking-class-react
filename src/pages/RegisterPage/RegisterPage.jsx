@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SignUpForm from "../../components/form/SignUpForm";
 import { useNavigate  } from "react-router-dom";
 import { useAppContext } from "../../store/appContext";
 import Toast from "../../components/Toast";
 
 const RegisterPage = () => {
-  const { isLoading, register } = useAppContext()
- 
+  const { isLoading, register,token } = useAppContext()
   const navigate = useNavigate()
+
+  useEffect(() => {
+     if (token) {
+      return navigate('/')
+    }
+  },[token])
+ 
   const [values, setValues] = useState({
     fullname: "",
     email: "",
@@ -30,8 +36,10 @@ const RegisterPage = () => {
       gender: "female"
     };
 
-    register(registerData)   
-
+  let isRegistrationSuccessfull = await register(registerData)   
+    if (isRegistrationSuccessfull) {
+      navigate('/login')
+    }
     // setValues({
     //   email: "",
     //   fullname: "",

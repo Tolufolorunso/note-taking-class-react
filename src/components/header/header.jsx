@@ -6,26 +6,21 @@ import "./Header.css";
 
 const Header = () => {
   const [user, setUser] = useState(null)
-  const [token, setToken] = useState('')
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const navigate = useNavigate()
  
-  const app = useAppContext()
-
-  console.log(app)
+  const {logout,token} = useAppContext()
 
   function handleLogout() {
-    localStorage.clear()
-    navigate('/login')
+    logout()
+    // navigate('/login')
+    window.location.href = "/login"
   }
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("user")) 
-    const tokenLS =localStorage.getItem("token")
-    if (data) {
-      setUser(data)
-      setToken(tokenLS)
-      console.log(11,data)
+  useEffect(() => {  
+    if (token) {
+      setIsLoggedIn(true)
     }
-    console.log(13,data)
+    console.log(token)
   }, [token])
   
   return (
@@ -38,13 +33,24 @@ const Header = () => {
         </Link>
 
         <ul className="nav__links">
-          <li className="nav__item">
+          
+         
+          {isLoggedIn ? (
+        <>          <li className="nav__item">
             <Link to="/notes" className="nav__link">
               Notes
             </Link>
+            </li>
+          <li className="nav__item">
+            <button className="nav__link" onClick={handleLogout}>
+              Logout
+            </button>
           </li>
-          {!user ? <>
-           <li className="nav__item">
+        </>
+      
+          ) : (
+        <>
+          <li className="nav__item">
             <Link to="/login" className="nav__link">
               Login
             </Link>
@@ -54,13 +60,9 @@ const Header = () => {
               Sign up
             </Link>
           </li>
-          </>: null}
-         
-          <li className="nav__item">
-            <button className="nav__link" onClick={handleLogout}>
-              Logout
-            </button>
-          </li>
+          </>
+            )        
+          }
         </ul>
       </header>
     </div>
